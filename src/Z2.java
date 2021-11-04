@@ -10,6 +10,7 @@ public class Z2 {
     public static int[] gcdex(int a, int b){
         int x1 = 1, x2 = 0;
         int y1 = 0, y2 = 1;
+        int sb  = b;
         while(b != 0) {
             int quotient = a / b;
             int r = a %b;
@@ -23,7 +24,7 @@ public class Z2 {
             y2 = tempR;
         }
         System.out.println("nsd = " +a + "; x = " + x1 + "; y = " + y1);
-        System.out.println(a + "*"+ x1 + "+"+b+"*"+y1+"="+a);
+        System.out.println(a + "*"+ x1 + "+"+sb+"*"+y1+"="+a);
         return new int[]{a,x1,y1};
     }
 }
