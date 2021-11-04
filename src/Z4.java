@@ -11,12 +11,20 @@ public class Z4 {
 
     public static int phi(int m) {
         int n = 2;
-        int k = 0;
-        while (n <= m) {
-            if (m % n > 0) {
-                k++;
+        int k = m;
+        while (n*n <= m) {
+            if (m % n == 0) {
+                while(m%n==0){
+                    m/=n;
+                }
+                k-=k/n;
             }
-            n++;
+            else {
+                n++;
+            }
+        }
+        if (m>1){
+            k-=k/m;
         }
         return k;
 
