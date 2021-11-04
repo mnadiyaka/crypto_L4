@@ -9,7 +9,7 @@ public class Z5 {
         System.out.println("inv= " + inverse_element_2(a, p));
     }
 
-    public static double inverse_element_2(int a, int p){
+    public static int inverse_element_2(int a, int p){
         int el = Z4.phi(p)-1;
         int step = (int)(Math.pow(a, el));
         int inv = step%p;
